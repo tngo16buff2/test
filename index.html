@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> NChocolate</title>
+  <link rel="stylesheet" href="../css/bt1.css">
+  <script src="../js/j3.5.js"></script>
+  <script src="../js/poper.js"></script>
+  <script src="../js/btmin.js"></script>
+  <script src="../js/dieukien.js"></script>
+  <style>
+    .navbar-nav .nav-link {
+      font-size: 26px;
+      margin-left: 20px;
+    }
+
+    .jumbotron {
+      background-image: url('../img/White-chocolate-bar.jpg');
+      background-size: cover;
+      color: rgb(26, 26, 26);
+    }
+
+    .feature-item {
+      border: 1px solid #0f0f0f;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    .container h2 {
+      font-size: 40px;
+      text-align: center;
+      color: brown;
+      margin-bottom: 70px;
+      position: relative;
+    }
+
+    .wrapper {
+      /* background-image: url('../img/bg.jpg'); */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    .jumbotron h1.display-4 {
+      font-size: 4em;
+
+      font-weight: bold;
+    }
+
+    .jumbotron p.lead {
+      font-size: 2em;
+
+      font-weight: bold;
+    }
+
+    .container .duoi {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Đăng nhập</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginUsername">Tên đăng nhập:</label>
+              <input type="text" id="loginUsername" name="loginUsername" class="form-control" required>
+              <div id="loginUsernameError" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Mật khẩu:</label>
+              <input type="password" id="loginPassword" name="loginPassword" class="form-control" required>
+              <div id="loginPasswordError" class="text-danger"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Form Đăng ký -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Đăng ký thành viên</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="username">Tên đăng nhập:</label>
+              <input type="text" id="username" name="username" class="form-control" required>
+              <div id="usernameError" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+              <div id="emailError" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="password">Mật khẩu:</label>
+              <input type="password" id="password" name="password" class="form-control" required>
+              <div id="passwordError" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Xác nhận mật khẩu:</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+              <div id="confirmPasswordError" class="text-danger"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+          </form>
+          <div class="success-message" style="display: none;">
+            <h3>Đăng ký thành công!</h3>
+            <p id="userInfo"></p>
+            <p>Mật khẩu của bạn là: <span id="userPassword"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="logo">
+          <a class="navbar-brand" href="#" style="margin-left: -80px;" ><img src="../img/logo.jpg " alt=""></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#loginModal">Đăng Nhập</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#registerModal">Đăng Ký Thành Viên</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/sp.html">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/gioithieu.html">Giới thiệu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="display-4">Chocolate nguyên chất </h1>
+        <p class="lead">Thưởng thức hương vị tinh tế từ những hạt cacao chất lượng.</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+
+    <section class="container">
+      <h2 class="text-center mb-4">Chào Mừng Đến Với <br> Sản phẩm của chúng tôi</h2>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp1.jpg" alt="Product Image" class="img-fluid">
+            <h3>Truffles – Pralines</h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp1.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp2.png" alt="Product Image" class="img-fluid">
+            <h3>chocolate Belgium</h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp2.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp3.png" alt="Product Image" class="img-fluid">
+            <h3>Gourmet Box </h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp3.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp4.png" alt="Product Image" class="img-fluid">
+            <h3>Almond Butter Bars</h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp4.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp5.png" alt="Product Image" class="img-fluid">
+            <h3>Bourbon Caramel Fudge</h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp5.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp6.png" alt="Product Image" class="img-fluid">
+            <h3>Cheese Cake</h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp6.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp7.png" alt="Product Image" class="img-fluid">
+            <h3>French Macarons</h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp7.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+            <img src="../img/sp8.png" alt="Product Image" class="img-fluid">
+            <h3>Salted Caramel bars</h3>
+            <p>Giá: $100</p>
+            <a href="../html/sp8.html" class="btn btn-primary btn-sm">Xem chi tiết</a>
+          </div>
+        </div>
+
+    </section>
+    <section class="container">
+      <div class="duoi">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="feature-item text-center">
+              <img src="../img/TC1.jpg" alt="Quality" class="img-fluid mb-3">
+              <h3>Chất lượng cao</h3>
+              <p>Sản phẩm được chọn lọc từ những hạt cacao tốt nhất.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-item text-center">
+              <img src="../img/TC2.jpg" alt="Innovation" class="img-fluid mb-3">
+              <h3>Sáng tạo</h3>
+              <p>Luôn đổi mới trong quá trình sản xuất để mang đến trải nghiệm tuyệt vời nhất cho khách hàng.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-item text-center">
+              <img src="../img/TC3.jpg" alt="Happiness" class="img-fluid mb-3">
+              <h3>Hạnh phúc</h3>
+              <p>Đảm bảo mỗi viên sô cô la mang lại niềm vui và hạnh phúc cho người thưởng thức.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+  <div class="shop-info">
+    <h2>Thông tin cửa hàng</h2>
+    <ul>
+      <li><strong>Số điện thoại:</strong> <a href="">08385122XX</a></li>
+      <li><strong>Email:</strong> <a href="#">tuanmanh1605@gmail.com</a></li>
+      <li><strong>Địa chỉ:</strong> 167 Đường Trần Hưng Đạo , Phường 11, Quận x, Thành phố Hồ Chí Minh</li>
+    </ul>
+  </div>
+
+  </div>
+  
+</body>
+
+</html>

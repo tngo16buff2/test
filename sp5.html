@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="../css/bt1.css">
+  <script src="../js/j3.5.js"></script>
+  <script src="../js/poper.js"></script>
+  <script src="../js/btmin.js"></script>
+  <style>
+    /* Custom styles */
+    .product-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .product-image {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .product-details {
+  color: white; /* Đặt màu chữ */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Đặt shadow cho chữ */
+  background-color: rgba(0, 0, 0, 0.5); /* Thêm một lớp background mờ cho chữ */
+  padding: 20px;
+}
+
+    .wrapper {
+      background-image: url('../img/sp5.png');
+      background-size: cover;
+      /* Phủ kín toàn bộ khung nhìn, bảo toàn tỷ lệ */
+      background-position: center;
+      /* Căn giữa hình nền */
+      background-repeat: no-repeat;
+      /* Không lặp lại hình nền */
+      min-height: 100vh;
+      /* Đảm bảo wrapper ít nhất bằng chiều cao viewport */
+    }
+  </style>
+</head>
+<div class="wrapper">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Truffles – Pralines</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../html/index.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/sp.html">Sản phẩm</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Hình ảnh sản phẩm -->
+        <div class="product-container">
+          <div class="product-image">
+            <img src="../img/sp5.png" alt="Product Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Nội dung sản phẩm -->
+        <div class="product-details">
+          <h2>Bourbon Caramel Fudge</h2>
+          <p>Giá: $100</p>
+          <p>Mô tả sản phẩm:</p>
+          <p>Là một món ăn tuyệt vời cho những người đang theo dõi lượng đường tiêu thụ hoặc theo một lối sống ăn kiêng cụ thể, những thanh bơ hạnh nhân sô cô la đen này được làm bằng các nguyên liệu hữu cơ được chứng nhận cũng thân thiện với Paleo và thuần chay!
+            Mặt hàng này được sản xuất trong cơ sở không chứa gluten. Mặt hàng này cũng không có ngô, không có sữa, không có trứng, không có đậu phộng, không có đường tinh luyện, không có đậu nành và thuần chay.
+            THÀNH PHẦN: Bột cacao hữu cơ, Bơ cacao hữu cơ, Bơ hạnh nhân hữu cơ, Đường dừa hữu cơ, Đậu vani hữu cơ, Muối Himalaya. (CHỨA HẠNH NHÂN)</p>
+          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

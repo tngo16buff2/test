@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="../css/bt1.css">
+  <script src="../js/j3.5.js"></script>
+  <script src="../js/poper.js"></script>
+  <script src="../js/btmin.js"></script>
+  <style>
+    /* Custom styles */
+    .product-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .product-image {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .product-details {
+  color: white; /* Đặt màu chữ */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Đặt shadow cho chữ */
+  background-color: rgba(0, 0, 0, 0.5); /* Thêm một lớp background mờ cho chữ */
+  padding: 20px;
+}
+
+    .wrapper {
+      background-image: url('../img/sp1.jpg');
+      background-size: cover;
+      /* Phủ kín toàn bộ khung nhìn, bảo toàn tỷ lệ */
+      background-position: center;
+      /* Căn giữa hình nền */
+      background-repeat: no-repeat;
+      /* Không lặp lại hình nền */
+      min-height: 100vh;
+      /* Đảm bảo wrapper ít nhất bằng chiều cao viewport */
+    }
+  </style>
+</head>
+<div class="wrapper">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Truffles – Pralines</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../html/index.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/sp.html">Sản phẩm</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Hình ảnh sản phẩm -->
+        <div class="product-container">
+          <div class="product-image">
+            <img src="../img/sp1.jpg" alt="Product Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Nội dung sản phẩm -->
+        <div class="product-details">
+          <h2>Truffles – Pralines</h2>
+          <p>Giá: $100</p>
+          <p>Mô tả sản phẩm:</p>
+          <p>Truffles – Pralines là một loại socola khá nổi tiếng trên thế giới thuộc thương hiệu Chocolate Graphics của Bỉ. Bên ngoài của viên kẹo được bọc bằng một lớp cacao nguyên chất, bên trong nhân là lớp socola tan chảy với đa dạng các vị khác nhau như: dâu, vani, matcha, tiramisu,… để người dùng có thể thoải mái lựa chọn sao cho phù hợp với khẩu vị của mình.</p>
+          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

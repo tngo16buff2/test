@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="../css/bt1.css">
+  <script src="../js/j3.5.js"></script>
+  <script src="../js/poper.js"></script>
+  <script src="../js/btmin.js"></script>
+  <style>
+    /* Custom styles */
+    .product-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .product-image {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .product-details {
+  color: white; /* Đặt màu chữ */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Đặt shadow cho chữ */
+  background-color: rgba(0, 0, 0, 0.5); /* Thêm một lớp background mờ cho chữ */
+  padding: 20px;
+}
+
+    .wrapper {
+      background-image: url('../img/sp4.png');
+      background-size: cover;
+      /* Phủ kín toàn bộ khung nhìn, bảo toàn tỷ lệ */
+      background-position: center;
+      /* Căn giữa hình nền */
+      background-repeat: no-repeat;
+      /* Không lặp lại hình nền */
+      min-height: 100vh;
+      /* Đảm bảo wrapper ít nhất bằng chiều cao viewport */
+    }
+  </style>
+</head>
+<div class="wrapper">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Truffles – Pralines</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../html/index.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/sp.html">Sản phẩm</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Hình ảnh sản phẩm -->
+        <div class="product-container">
+          <div class="product-image">
+            <img src="../img/sp4.png" alt="Product Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Nội dung sản phẩm -->
+        <div class="product-details">
+          <h2>Almond Butter Bars</h2>
+          <p>Giá: $100</p>
+          <p>Mô tả sản phẩm:</p>
+          <p>Kem mềm cực kỳ mềm mại của chúng tôi được làm từ những nguyên liệu đơn giản bao gồm đường, sữa, vani và sô cô la! Sôcôla Bỉ cao cấp, nguyên chất của chúng tôi được làm nổi bật một cách ngọt ngào nhất với kẹo mềm thơm ngon. Kẹo mềm caramel Bourbon của chúng tôi được tạo ra bằng .
+            Mặt hàng này được sản xuất trong cơ sở không chứa gluten. Mặc dù mặt hàng này không chứa đậu phộng hoặc hạt cây, nhưng một trong những nguyên liệu được sử dụng đến từ nhà sản xuất dùng chung thiết bị với đậu phộng và hạt cây; do đó, chúng tôi không thể đề xuất mặt hàng này cho những người bị dị ứng/nhạy cảm với các loại hạt.
+            THÀNH PHẦN: Đường, Đường nâu, Kem đặc, Bơ (kem, sữa, nước), Bơ ca cao, Sữa bột, Bột ca cao, Lecithin đậu nành (chất nhũ hóa), Vani tự nhiên, Xi-rô ngô, Kali Sorbate, Muối biển (CHỨA Bắp: CHỨA SỮA; CHỨA ĐẬU NÀNH)</p>
+          <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
